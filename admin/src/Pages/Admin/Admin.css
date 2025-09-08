@@ -1,0 +1,68 @@
+/* Admin.css - Enhanced styles with logout button */
+
+.admin {
+    display: flex;
+}
+
+/* Logout button container */
+.admin-logout-container {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Enhanced logout button styles */
+.admin-logout-btn {
+    background: linear-gradient(135deg, #ff4757, #ff3838);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 100px;
+}
+
+.admin-logout-btn:hover {
+    background: linear-gradient(135deg, #ff3838, #ff2828);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 71, 87, 0.4);
+}
+
+.admin-logout-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(255, 71, 87, 0.3);
+}
+
+.admin-logout-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.2);
+}
+
+
+
+@media(max-width: 800px) {
+    .admin {
+        flex-direction: column;
+    }
+    
+    .admin-logout-container {
+        position: relative;
+        top: auto;
+        right: auto;
+        padding: 15px;
+        text-align: right;
+    }
+    
+    .admin-logout-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+        min-width: 80px;
+    }
+}

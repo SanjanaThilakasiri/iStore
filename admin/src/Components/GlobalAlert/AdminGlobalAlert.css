@@ -1,0 +1,141 @@
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* High z-index to appear above everything */
+}
+
+.alert-modal {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    margin: 20px;
+}
+
+.alert-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.alert-content h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.alert-content p {
+    margin: 0 0 25px 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+.alert-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Base button styles */
+.alert-buttons button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+/* Success button */
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Error/Retry button */
+.btn-retry {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-retry:hover {
+    background-color: #c82333;
+}
+
+/* Confirm button */
+.btn-confirm {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-confirm:hover {
+    background-color: #0056b3;
+}
+
+/* Warning button */
+.btn-warning {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Info button */
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
+
+/* Cancel button */
+.btn-cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #545b62;
+}
+
+/* Active state for all buttons */
+.alert-buttons button:active {
+    transform: translateY(1px);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .alert-modal {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    .alert-content {
+        padding: 25px 20px;
+    }
+    
+    .alert-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .alert-buttons button {
+        width: 100%;
+    }
+}

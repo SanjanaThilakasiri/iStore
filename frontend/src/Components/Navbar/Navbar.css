@@ -1,0 +1,248 @@
+
+
+.navbar-container {
+    width: 100%;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: relative;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+.navbar-logo:hover {
+    cursor: pointer;;
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+.istore-logo  {
+    height: 70px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-menu-link:hover {
+    color: #f81818;
+}
+
+.nav-menu-link-hr {
+    height: 3px;
+    width: 100%;
+    margin: 0;
+    border: none;
+    background-color: #f81818;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.login-button {
+    padding: 8px 25px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color:  #d1caca;
+}
+
+.cart-icon-container {
+    position: relative;
+}
+
+.cart-icon-container img {
+    height: 24px;
+}
+
+.nav-cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #f81818;
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-dropdown {
+    display: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 24px;
+    height: 24px;
+}
+
+.nav-dropdown.open {
+    transform: rotate(180deg);
+    
+}
+
+.mobile-nav-menu {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #e1e1e1;
+}
+
+.mobile-nav-menu li {
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #e1e1e1;
+    position: relative;
+}
+
+.mobile-nav-menu.nav-menu-visible {
+    display: flex;
+}
+
+.user-menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+.user-profile-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+
+
+.user-icon {
+    width: 26px;
+    height: 26px;
+}
+
+
+
+.user-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 120px;
+    z-index: 1000;
+}
+
+.user-menu-item {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.user-menu-item:hover {
+    background-color: #f5f5f5;
+}
+
+.sign-out-item {
+    width: 100%;
+    border-top: 1px solid #eee;
+    color: #d32f2f;
+}
+
+@media (max-width: 992px) {
+
+    .navbar {
+        padding: 10px 70px;
+    }
+    .nav-menu {
+
+        display: none;
+    }
+    
+    .nav-dropdown {
+        display: block;
+    }
+    
+    .mobile-nav-menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 50px;
+    }
+    
+    .login-button {
+        padding: 6px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        padding: 4px 12px;
+    }
+    
+    .login-button {
+        padding: 4px 15px;
+        font-size: 12px;
+    }
+}

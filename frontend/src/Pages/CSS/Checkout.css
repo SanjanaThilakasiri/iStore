@@ -1,0 +1,133 @@
+.checkout-container{
+    display: flex;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.order-summary{
+    width: 50%;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.order-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-details{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-image{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.total{
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.payment-section{
+    width: 50%;
+    padding: 20px;
+}
+
+.form-loading{
+    text-align: center;
+    padding: 20px;
+}
+
+.form-error{
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .checkout-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .order-summary {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+    
+    .payment-section {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .order-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px 0;
+    }
+    
+    .item-details {
+        width: 100%;
+    }
+    
+    .item-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .total {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkout-container {
+        padding: 10px;
+    }
+    
+    .order-summary {
+        padding: 10px;
+    }
+    
+    .payment-section {
+        padding: 10px;
+    }
+    
+    .order-item {
+        padding: 10px 0;
+    }
+    
+    .item-details {
+        gap: 8px;
+    }
+    
+    .item-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .total {
+        font-size: 15px;
+    }
+    
+    .form-loading,
+    .form-error {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
