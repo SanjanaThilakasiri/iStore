@@ -44,6 +44,7 @@ cd iStore/backend
 npm install
 cp .env.example .env
 # Update MongoDB and Stripe credentials in .env
+# Update MongoDB connection URL on index.js
 npm start
 ```
 
